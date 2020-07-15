@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Jokerman;
+    src: url('../webfonts/Jokerman-Regular.ttf');
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+header {
+    line-height: 40px;
+}
+
+.header-head {
+    height: 40px;
+    background-color: #550285;
+    color: white;
+}
+.head-logo {
+    font-family: Jokerman;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.header-display {
+    display: inline-block;
+}
+.connect-display {
+    display: inline-block;
+    margin-right: 60px;
+}
+.social-display {
+    display: inline-block;
+}
+header i, header p {
+    display: inline-block;
+}
+header i {
+    font-size: 15px;
+    margin-right: 10px;
+}
+header a {
+    color: white;
+}
+.social-media {
+    position: absolute;
+    right: 335px;
+}
+.social-media i {
+    line-height: 40px;
+    font-size: 20px;
+}
+.image-1 {
+    display: flex;
+}
+.image-1 img {
+    width: 80%;
+    margin: 0 auto;
+}
