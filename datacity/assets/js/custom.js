@@ -1,0 +1,30 @@
+$(function(){
+    $('.working-companies').hover(function(){
+        $('.companies-navbar').slideDown(400);
+    },function(){
+        $('.companies-navbar').slideUp(400);
+    })
+    $('.work-samples').hover(function(){
+        $('.work-samples-navbar').slideDown(400);
+    },function(){
+        $('.work-samples-navbar').slideUp(400);
+    })
+    $('.team').hover(function(){
+        $('.team-navbar').slideDown(400);
+    },function(){
+        $('.team-navbar').slideUp(400);
+    })
+    $('.contactBtn').click(function(){
+        $('.form-modal').fadeIn(400);
+        $('.inside-modal').hide();
+    })
+    $('#cancelBtn').click(function(e){
+        e.preventDefault();
+        $('.form-modal').fadeOut(400);
+    })
+    $('#submitBtn').click(function(e){
+        e.preventDefault();
+        $('.inside-modal').fadeIn(0.1);
+        $('.form-modal').fadeOut(1500);
+    })
+})

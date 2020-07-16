@@ -7,13 +7,49 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 </head>
 <body>
+    <div class="form-modal">
+        <div class="form-wrapper">
+            <div class="form-modal-container">
+                <div class="form-head">
+                    <h2>Müraciət Formu</h2>
+                </div>
+                <form method="POST">
+                    <div class="full-name form-input">
+                        <input id="fName" type="text" placeholder="Adınız, Soyadınız">
+                    </div>
+                    <div class="email form-input">
+                        <input id="email" type="email" placeholder="sample@example.com">
+                    </div>
+                    <div class="phone-number form-input">
+                        <input id="phNumber" type="text" placeholder="+994(55) 555 55 55">
+                    </div>
+                    <div class="company-name form-input">
+                        <input id="compName" type="text" placeholder="Şirkətinizin Adı">
+                    </div>
+                    <div class="textarea form-input">
+                        <textarea id="textarea" cols="23" rows="4" placeholder="Müraciətinizin səbəbini bura yazın"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button id="cancelBtn">Ləğv et</button>
+                        <button id="submitBtn" type="submit">Göndər</button>
+                    </div>
+                </form>
+            </div>
+            <div class="inside-modal">
+                <div class="inside-modal-container">
+                    <p>Müraciətiniz üçün təşəkkürlər!</p>
+                </div>
+            </div>      
+        </div>
+    </div>
     <header>
         <div class="header-head">
-            <div class="container">
-                <div class="head-logo header-display">
-                    <img src="assets/img/Icon simple-linewebtoon.png" alt="">
+            <div class="row">
+                <div class="head-logo header-display col-lg-3">
                     <p>DTECH</p>
                 </div>
                 <div class="connect-info header-display">
@@ -56,108 +92,196 @@
                     <p>Gələcəyinizi bizimlə qurun</p>
                 </div>
                 <div class="main-navbar col-lg-9">
-                    <div class="home-page navbar-display">
-                        <p>Əsas Səhifə</p>
-                    </div>
-                    <div class="working-companies navbar-display">
-                        <p>İşlədiyimiz Şirkətlər</p>
-                        <i></i>
-                    </div>
-                    <div class="work-samples navbar-display">
-                        <p>İşimizdən Nümunələr</p>
-                        <i></i>
-                    </div>
-                    <div class="team navbar-display">
-                        <p>Komandamız</p>
-                        <i></i>
-                    </div>
-                    <div class="about-us navbar-display">
-                        <p>Haqımızda</p>
-                    </div>
-                    <div class="connections navbar-display">
-                        <p>Əlaqə</p>
+                    <div class="navbar-container">
+                        <div class="home-page navbar-display">
+                            <p> Əsas Səhifə</p>
+                        </div>
+                        <div class="working-companies navbar-display">
+                            <p>İşlədiyimiz Şirkətlər</p>
+                            <i class="fas fa-caret-down"></i>
+                            <div class="companies-navbar">
+                                <div class="company-list">PASHA Holdin</div>
+                                <div class="company-list">Gilan Holding</div>
+                                <div class="company-list">ASC Bank</div>
+                                <div class="company-list">ÇALDAŞ MMC</div>
+                            </div>
+                        </div>
+                        <div class="work-samples navbar-display">
+                            <p>İşimizdən Nümunələr</p>
+                            <i class="fas fa-caret-down"></i>
+                            <div class="work-samples-navbar">
+                                <div class="work-samples-list">Oyunlar</div>
+                                <div class="work-samples-list">Mobil Aplikasiyalar</div>
+                                <div class="work-samples-list">Web Dizaynlar</div>
+                                <div class="work-samples-list">Proqramlar</div>
+                            </div>
+                        </div>
+                        <div class="team navbar-display">
+                            <p>Komandamız</p>
+                            <i class="fas fa-caret-down"></i>
+                            <div class="team-navbar">
+                                <div class="team-list">Komanda Üzvlərimiz</div>
+                                <div class="team-list">Sahələr Üzrə Komandalar</div>
+                                <div class="team-list">Komandamızın Naaliyyətləri</div>
+                            </div>
+                        </div>
+                        <div class="about-us navbar-display">
+                            <p>Haqımızda</p>
+                        </div>
+                        <div class="connections navbar-display">
+                            <p>Əlaqə</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    
     <section class="main-image">
-        <div class="slider">
-            <div class="slider-wrapper">
-                <div class="image-1" data-image = "image-1">
-                    <img src="assets/img/web-dev-coding.jpg" alt="">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide image-1 id = "image-1">
+                    <img src="assets/img/dtech.jpg" alt="">
                 </div>
-                <div class="image-2" data-image="image-2"></div>
-                <div class="image-3" data-image="image-3"></div>
+                <div class="swiper-slide image-2 id="image-2">
+                    <img src="assets/img/hero1.jpg" alt="">
+                </div>
+                <div class="swiper-slide image-3" id="image-3"">
+                    <img src="assets/img/web-dev4.jpg" alt="">
+                </div>
             </div>
-            <div class="slide-button">
-                <div id="button-image-1" data-button="button-1"></div>
-                <div id="button-image-2" data-button="button-2"></div>
-                <div id="button-image-3" data-button="button-3"></div>
-            </div>
+             <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
     <section class="company-infos">
-        <div class="company-info-1 company-info-display">
-            <div class="company-info-head"></div>
-            <div class="company-info-img"></div>
-            <div class="company-info-parag"></div>
+        <div class="company-purpose company-info-display">
+            <div class="company-info-head">
+                <h3>Məqsədimiz nələrdir</h3>
+            </div>
+            <div class="company-info-img">
+                <img src="assets/img/purpose.jpeg" alt="">
+            </div>
+            <div class="company-info-parag">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum officiis consequuntur doloribus repellat veniam rem aperiam, 
+                    consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad. Atque earum officiis consequuntur
+                    doloribus repellat veniam rem aperiam, consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.</p>
+            </div>
         </div>
-        <div class="company-info-2 company-info-display">
-            <div class="company-info-head"></div>
-            <div class="company-info-img"></div>
-            <div class="company-info-parag"></div>
+        <div class="company-choose-us company-info-display">
+            <div class="company-info-head">
+                <h3>Bizi niyə seçməlisiniz</h3>
+            </div>
+            <div class="company-info-img">
+                <img src="assets/img/115233882-why-choose-us.jpg" alt="">
+            </div>
+            <div class="company-info-parag">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum officiis consequuntur doloribus repellat veniam rem aperiam, 
+                    consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.Atque earum officiis consequuntur
+                    doloribus repellat veniam rem aperiam, consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.</p>
+            </div>
         </div>
-        <div class="company-info-3 company-info-display">
-            <div class="company-info-head"></div>
-            <div class="company-info-img"></div>
-            <div class="company-info-parag"></div>
+        <div class="company-working-areas company-info-display">
+            <div class="company-info-head">
+                <h3>Hansı sahələrdə iş görürük</h3>
+            </div>
+            <div class="company-info-img">
+                <img src="assets/img/Event-management-software-scoro.jpg" alt="">
+            </div>
+            <div class="company-info-parag">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum officiis consequuntur doloribus repellat veniam rem aperiam, 
+                    consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.Atque earum officiis consequuntur 
+                    doloribus repellat veniam rem aperiam, consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.</p>
+            </div>
         </div>
     </section>
     <section class="light-info">
         <div class="row">
             <div class="col-lg-6 light-info-leftaside">
-                <div class="light-info-parag"></div>
-                <div class="button"></div>
+                <div class="light-info-parag">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque earum officiis consequuntur doloribus repellat veniam rem aperiam, 
+                        consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.Atque earum officiis consequuntur 
+                        doloribus repellat veniam rem aperiam, consectetur voluptatem, repellendus qui at quo aliquam? Officia mollitia nemo numquam sint ad.</p>
+                </div>
+                <button class="button">Daha Ətraflı</button>
             </div>
             <div class="col-lg-6 light-info-rightaside">
-                <div class="light-info-box"></div>
+                <div class="light-info-box">
+                    <img src="assets/img/dtech.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
+    
     <footer>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="footer-logo">
-                    <i></i>
-                    <p>DTECH</p>
-                    <p>Gələcəyinizi bizimlə qurun</p>
-                </div>
-
-            </div>
-            <div class="col-lg-4">
-                <div class="sponsors">
-                    <ul class="sponsor">
-                        <li class="sponsor-list"><a href="#">Logi Holding</a></li>
-                        <li class="sponsor-list"><a href="#">Britech</a></li>
-                        <li class="sponsor-list"><a href="#">ShahMan</a></li>
-                        <li class="sponsor-list"><a href="#">TechStars</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="connections">
-                    <div class="phone-numb">
+        <section class="footer-container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo footer-center">
                         <i></i>
-                        <p>+994(50) 867 16 19</p>
+                        <h3>DTECH</h3>
+                        <p>Gələcəyinizi bizimlə qurun</p>
+                        <div class="footer-social">
+                            <div class="instagram social-display">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="telegram social-display">
+                                <a href="#">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                            </div>
+                            <div class="facebook social-display">
+                                <a href="#">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </div>
+                            <div class="linkedin social-display">
+                                <a href="#">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mail-info">
-                        <i></i>
-                        <p>ashahvaladov@outlook.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sponsors footer-center">
+                        <h3>Sponsors</h3>
+                        <ul class="sponsor">
+                            <li class="sponsor-list"><a href="#">Logi Holding</a></li>
+                            <li class="sponsor-list"><a href="#">Britech</a></li>
+                            <li class="sponsor-list"><a href="#">ShahMan</a></li>
+                            <li class="sponsor-list"><a href="#">TechStars</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="connections footer-center">
+                        <h3>Əlaqə</h3>
+                        <div class="phone-numb connections-connection">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>+994(50) 867 16 19</p>
+                        </div>
+                        <div class="mail-info connections-connection">
+                            <i class="far fa-envelope"></i>
+                            <p>ashahvaladov@outlook.com</p>
+                        </div>
+                        <button class="contactBtn">Müraciət et</button>
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="copyright">
+            <p>&copy; 2020 Website Created by <span>ShahMan</span></p>
         </div>
     </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/infinite-loop.js"></script>
 </body>
 </html>

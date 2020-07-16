@@ -3,25 +3,32 @@
     src: url('../webfonts/Jokerman-Regular.ttf');
 }
 
+p {
+    margin-bottom: 0 !important;
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
     padding: 0;
 }
+body a {
+    color: white;
+    transition-duration: 0.5s;
+}
 
-body {
-
+body a:hover {
+    text-decoration: none;
 }
 
 header {
     line-height: 40px;
 }
 header img {
-    position: relative;
     height: 25px;
-    width: 25px;
-    top: 5px;
+    width: 25px;    
 }
 
 .header-head {
@@ -29,15 +36,34 @@ header img {
     background-color: #550285;
     color: white;
 }
+.header-head i {
+    transition-duration: 0.5s;
+}
+.header-head i:hover {
+    color: #090;
+    text-shadow: 0px 0px 50px #fff;
+    font-size: 30px;
+}
 .header-head  .container {
     padding-left: 200px !important;
     padding-right: 200px !important;
     max-width: 100% !important; 
 }
 .head-logo {
-    font-family: Jokerman;
+    background-color: white;
+    margin-left: -2%;
+    transform: skewX(45deg);
+    color: #550285;
     margin-right: 100px;
     letter-spacing: 5px;
+    text-align: center;
+}
+.head-logo p {
+    text-align: center;
+    font-family: Jokerman;
+    font-size: 20px;
+    letter-spacing: 4px;
+    transform: skewX(-45deg);
 }
 .header-display {
     display: inline-block;
@@ -68,24 +94,373 @@ header a {
     font-size: 20px;
 }
 
-
 .header-navbar {
-    width: 100%;
-}
-
-
-.main-navbar {
     background-color: #550285;
+    height: auto;
+}
+.row {
+    margin: 0 !important;
+}
+.companies-navbar {
+    display: none;
+    position: absolute;
+    background-color: #550285;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    text-shadow: 0px 0px 30px #fff;
+    z-index: 10;
+}
+.company-list {
+    transition-duration: 0.5s;
+}
+.company-list:hover {
+    background-color: #090;
+}
+.navbar-logo {
+    background-color: white;
+    margin-left: -2%;
+    transform: skewX(-45deg);
+    text-align: center;
+}
+.work-samples-navbar {
+    display: none;
+    position: absolute;
+    background-color: #550285;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    text-shadow: 0px 0px 30px #fff;
+    z-index: 10;
+}
+.work-samples-list {
+    transition-duration: 0.5s;
+}
+.work-samples-list:hover {
+    background-color: #090;
+}
+.team-navbar {
+    display: none;
+    position: absolute;
+    background-color: #550285;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    text-shadow: 0px 0px 30px #fff;
+    z-index: 10;
+}
+.team-list {
+    transition-duration: 0.5s;
+}
+.team-list:hover {
+    background-color: #090;
+}
+.navbar-logo p {
+    font-family: Jokerman;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-left: 5%;
+    transform: skewX(45deg);
+}
+.navbar-container {
+    float: right;
+}
+.main-navbar {
+    padding-left: 45px !important;
     color: white;
-    transform: skewX(120deg);
 }
 .navbar-display {
     display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 200px;
+    text-shadow: 0px 0px 50px #fff;
+    transition-duration: 0.5s;
+}
+.navbar-display:hover {
+    background-color: #270033;
 }
 .image-1 {
     display: flex;
 }
-.image-1 img {
+.main-image img {
+    width: 100%;
+    height: 800px;
+}
+.company-infos {
     width: 80%;
+    margin: 100px auto 0;
+}
+
+.company-info-display {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    background-color: #550285;
+    color: white;
+    border-radius: 20px;
+    margin: 0px 20px 0px 25px;
+    height: 600px;
+    box-shadow: 0px 0px 50px #270033;
+    text-shadow: 0px 0px 50px #fff;
+}
+.company-info-head {
+    border-bottom: 5px solid #fff;
+}
+.company-info-img {
+    margin-top: 20px;
+}
+.company-info-img img {
+    width: 100%;
+    height: 250px;
+}
+
+.company-info-parag {
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.company-info-parag p {
+    text-align: justify;
+}
+.light-info {
+    width: 80%;
+    margin: 100px auto 0;
+}
+.light-info-parag {
+    display: flex;
+    background-color: #550285;
+    color: white;
+    box-sizing: border-box;
+    width: 80%;
+    height: 300px;
+    padding: 0 60px;
+    text-align: justify;
+    align-items: center;
+    box-shadow: 0px 0px 50px #000;
+    border-radius: 20px;
+    text-shadow: 0px 0px 30px #fff;
+}
+
+.button {
+    margin-top: 40px;
+    width: 80%;
+    border: 1px solid #550285;
+    background-color: #550285;
+    color: white;
+    height: 50px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: Jokerman;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #270033;
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 20px #fff;
+}
+.button:hover {
+    background-color: #090;
+    box-shadow: 0px 0px 50px #550285;
+}
+.light-info-box {
+    background-color: #550285;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px #270033;
+}
+.light-info-box img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+.form-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 20;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form-modal-container {
+    text-align: center;
+    background-color: #270033;
+    width: 50%;
+    height: 82%;
+    border-radius: 50px;
+}
+.form-head {
+    display: flex;
+    background-color: #550285;
+    justify-content: center;
+    border-radius: 50px 50px 0 0;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 0px 30px #fff;
+    height: 100px;
+    width: 100%;
+}
+.form-input {
+    margin-top: 50px;
+}
+.form-input input{
+    width: 350px;
+    height: 40px;
+    padding: 20px;
+}
+.form-input textarea{
+    width: 350px;
+    padding: 20px;
+}
+.form-buttons {
+    width: 50%;
     margin: 0 auto;
+    margin-top: 50px;
+}
+#cancelBtn {
+    background-color: #550285;
+    border: 1px solid #550285;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px #fff;
+    width: 100px;
+    height: 40px;
+    float: left;
+    text-shadow: 0px 0px 30px #fff;
+}
+#cancelBtn:hover {
+    background-color: #090;
+    box-shadow: 0px 0px 50px #fff;
+}
+#submitBtn {
+    background-color: #550285;
+    border: 1px solid #550285;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px #fff;
+    width: 100px;
+    height: 40px;
+    float: right;
+    text-shadow: 0px 0px 30px #fff;
+}
+#submitBtn:hover {
+    background-color: #090;
+    box-shadow: 0px 0px 50px #fff;
+}
+.inside-modal {
+    position: absolute;
+    display: none;
+    border-radius: 50px;
+    background-color: #090;
+    color: white;
+    width: 30%;
+    height: 30%;
+    font-size: 30px;
+    box-shadow: 0px 0px 50px #fff;
+    z-index: 100;
+}
+.inside-modal-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    margin-top: 50px;
+    background-color: #270033;
+    color: white;
+    height: 100%;
+    text-shadow: 0px 0px 30px #fff;
+}
+footer li {
+    list-style: none;
+}
+.footer-container {
+    width: 80%;
+    padding-top: 40px;
+    margin: 0px auto;
+}
+.footer-center {
+    text-align: center;
+}
+
+.footer-logo h3 {
+    font-family: Jokerman;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+.footer-logo p {
+    font-family: Jokerman;
+}
+.footer-social {
+    margin-top: 30px;
+    position: relative;
+    left: 15px;
+}
+.footer-social .social-display i {
+    font-size: 30px;
+    margin-right: 30px;
+    transition-duration: 0.4s;
+}
+.footer-social .social-display i:hover {
+    font-size: 45px;
+    color: #090;
+}
+.sponsors h3 {
+    font-size: 40px;
+}
+.sponsors a {
+    width: 100%;
+    transition-duration: 0.4s;
+}
+.sponsors a:hover {
+    text-shadow: 0px 0px 50px #fff;
+    color: #090;
+    font-size: 20px;
+}
+.sponsors li {
+    margin-bottom: 10px;
+}
+.connections h3 {
+    font-size: 40px;
+}
+.connections i {
+    position: relative;
+    top: 5px;
+    left: 100px;
+    float: left;
+}
+.connections-connection {
+    margin-bottom: 20px;
+}
+.connections button {
+    width: 65%;
+    height: 40px;
+    background-color: #550285;
+    border: 1px solid #550285;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #fff;
+    transition-duration: 0.5s;
+}
+.connections button:hover {
+    background-color: #090;
+    box-shadow: 0px 0px 50px #fff;
+}
+.copyright {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C002B;
+}
+.copyright span {
+    font-family: Jokerman;
 }
